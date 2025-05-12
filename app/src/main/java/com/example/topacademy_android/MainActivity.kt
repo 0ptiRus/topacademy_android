@@ -26,19 +26,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Log.i(FunctionLogs.ON_CREATE.func_name, "Активити создана!")
-        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString());
+        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString())
     }
 
     override fun onStart() {
         super.onStart()
         Log.i(FunctionLogs.ON_START.func_name, "Activity started!")
-        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString());
+        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString())
     }
 
     override fun onResume() {
         super.onResume()
         Log.i(FunctionLogs.ON_RESUME.func_name, "Activity resumed!")
-        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString());
+        Log.i("Elapsed time in ms", (System.currentTimeMillis() - startMs).toString())
     }
 
     override fun onPause() {
