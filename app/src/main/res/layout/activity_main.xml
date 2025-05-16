@@ -7,25 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tw_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tw_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tw_title"
-        android:text="@string/my_name"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            style="@style/Home.Header.Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/LoginLabel"
+            style="@style/Home.TextEdit.Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/EmailTextEdit"
+            android:text="@string/EmailLabel" />
+
+        <EditText
+            android:id="@+id/EmailTextEdit"
+            style="@style/Home.TextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48dp"
+            android:text="@string/EmailExample"
+            android:inputType="textEmailAddress"
+            />
+
+        <TextView
+            android:id="@+id/PasswordLabel"
+            style="@style/Home.TextEdit.Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/PasswordTextEdit"
+            android:text="@string/PasswordLabel"
+            android:textSize="@dimen/_18sp" />
+
+        <EditText
+            android:id="@+id/PasswordTextEdit"
+            style="@style/Home.TextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48dp"
+            android:text="@string/PasswordExample"
+            android:inputType="textPassword"
+            />
+        
+        <Button
+            style="@style/Home.LoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/LoginBtnText"
+            android:onClick="onButtonClick"
+            />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

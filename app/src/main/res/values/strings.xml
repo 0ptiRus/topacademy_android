@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">TopacAdemy_android</string>
     <string name="my_name">Roman</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_calculator">CalculatorActivity</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="equals">=</string>
+    <string name="EmailLabel">Email</string>
+    <string name="EmailExample">abcde@abcde.com</string>
+    <string name="PasswordLabel">Password</string>
+    <string name="PasswordExample">strongpassword123</string>
+    <string name="LoginBtnText">Log in</string>
+
 </resources>
