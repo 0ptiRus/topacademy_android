@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     android:background="@color/calcInputBg">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="My App"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <LinearLayout
         android:id="@+id/topSection"
         android:layout_width="match_parent"
@@ -67,6 +78,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:background="@drawable/rounder"
+            android:backgroundTint="@color/calc_orange_btn"
             android:text="C"
             android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp"/>

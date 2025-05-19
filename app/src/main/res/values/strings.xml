@@ -11,5 +11,6 @@
     <string name="PasswordLabel">Password</string>
     <string name="PasswordExample">strongpassword123</string>
     <string name="LoginBtnText">Log in</string>
+    <string name="title_activity_carlist">CarListActivity</string>
 
 </resources>

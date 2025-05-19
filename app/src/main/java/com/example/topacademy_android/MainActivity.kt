@@ -40,35 +40,44 @@ class MainActivity : AppCompatActivity() {
         }
 
         loginBtn.setOnClickListener{
-            checkEmail()
-            checkPass()
+            val isEmailValid = checkEmail()
+            val isPasswordValid = checkPass()
+
+            if (isEmailValid && isPasswordValid) {
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
-    private fun checkEmail() {
+    private fun checkEmail() : Boolean {
         val inputText = emailEditText.text.toString()
 
         if(inputText.isEmpty())
         {
             Toast.makeText(this@MainActivity,"Enter your email!", Toast.LENGTH_LONG).show()
+            return false
         }
         else
         {
             if (Patterns.EMAIL_ADDRESS.matcher(inputText).matches()) {
                 Toast.makeText(this@MainActivity, "Email Verified", Toast.LENGTH_LONG).show()
+                return true
             } else {
                 Toast.makeText(this@MainActivity, "Enter valid Email address!", Toast.LENGTH_LONG).show()
+                return false
             }
         }
     }
 
-    private fun checkPass()
+    private fun checkPass() : Boolean
     {
         val inputText = passEditText.text.toString()
 
         if(inputText.isEmpty())
         {
             Toast.makeText(this@MainActivity,"Enter your password!", Toast.LENGTH_LONG).show()
+            return false
         }
 
         else
@@ -76,10 +85,14 @@ class MainActivity : AppCompatActivity() {
             if(inputText.length > 6)
             {
                 Toast.makeText(this@MainActivity,"Password valid!", Toast.LENGTH_LONG).show()
+                return true
             }
             else
             {
-                Toast.makeText(this@MainActivity,"Password must be longer than 6 symbols!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity,
+                    "Password must be longer than 6 symbols!",
+                    Toast.LENGTH_LONG).show()
+                return false
             }
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Home.Header.Login" parent="android:Widget.TextView">
+    <style name="HomeHeaderLogin" parent="android:Widget.TextView">
         <item name="android:text">Login</item>
         <item name="android:textSize">@dimen/_48sp</item>
         <item name="android:textAlignment">center</item>
@@ -8,16 +8,16 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Home.TextEdit.Header" parent="android:Widget.TextView">
+    <style name="HomeTextEditHeader" parent="android:Widget.TextView">
         <item name="android:textSize">@dimen/_18sp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Home.TextEdit" parent="android:TextAppearance.Widget.EditText">
+    <style name="HomeTextEdit" parent="android:TextAppearance.Widget.EditText">
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Home.LoginBtn">
+    <style name="HomeLoginBtn">
         <item name="android:backgroundTint">@color/white</item>
     </style>
 

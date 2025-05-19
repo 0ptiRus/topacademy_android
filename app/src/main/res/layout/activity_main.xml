@@ -20,7 +20,7 @@
         >
 
         <TextView
-            style="@style/Home.Header.Login"
+            style="@style/HomeHeaderLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/LoginLabel"
-            style="@style/Home.TextEdit.Header"
+            style="@style/HomeTextEditHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:labelFor="@id/EmailTextEdit"
@@ -38,7 +38,7 @@
 
         <EditText
             android:id="@+id/EmailTextEdit"
-            style="@style/Home.TextEdit"
+            style="@style/HomeTextEdit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48dp"
             android:text="@string/EmailExample"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/PasswordLabel"
-            style="@style/Home.TextEdit.Header"
+            style="@style/HomeTextEditHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:labelFor="@id/PasswordTextEdit"
@@ -56,7 +56,7 @@
 
         <EditText
             android:id="@+id/PasswordTextEdit"
-            style="@style/Home.TextEdit"
+            style="@style/HomeTextEdit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48dp"
             android:text="@string/PasswordExample"
@@ -65,7 +65,7 @@
         
         <Button
             android:id="@+id/LoginBtn"
-            style="@style/Home.LoginBtn"
+            style="@style/HomeLoginBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/LoginBtnText"

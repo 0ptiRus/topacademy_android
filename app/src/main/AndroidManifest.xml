@@ -16,7 +16,13 @@
             android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.TopacAdemy_android" />
+            android:theme="@style/Theme.TopacAdemy_android"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -26,21 +32,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CalculatorActivity"
             android:exported="false"
             android:label="@string/title_activity_calculator"
-            android:theme="@style/Theme.TopacAdemy_android" />
+            android:theme="@style/Theme.TopacAdemy_android"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+
         <activity
             android:name=".ListActivity"
             android:exported="false"
             android:label="@string/title_activity_list"
-            android:theme="@style/Theme.TopacAdemy_android" />
+            android:theme="@style/Theme.TopacAdemy_android"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+
         <activity
             android:name=".WeatherActivity"
             android:exported="false"
             android:label="@string/title_activity_weather"
-            android:theme="@style/Theme.TopacAdemy_android" />
+            android:theme="@style/Theme.TopacAdemy_android"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".CarListActivity"
+            android:exported="false"
+            android:label="@string/title_activity_carlist"
+            android:theme="@style/Theme.TopacAdemy_android"
+            android:parentActivityName=".HomeActivity">
+
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
 
     </application>
 
