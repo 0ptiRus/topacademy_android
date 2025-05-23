@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/calcInputBg">
+    android:background="?attr/colorSecondaryContainer">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -22,9 +22,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="@dimen/_16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <View
             android:layout_width="0dp"
@@ -35,11 +33,11 @@
             android:id="@+id/calculationText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/calcHistoryText"
-            android:textSize="@dimen/_16sp"
-            android:textStyle="bold"
             android:layout_gravity="center_vertical"
-            android:text="3000 : 10 X 0\n= 0\n100 + 400\n= 500\n500 + 5,000 + 5,000" />
+            android:text="@string/calcHistoryText"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
@@ -48,12 +46,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:padding="@dimen/_16dp"
-        android:background="@color/calcInputBg"
-        android:textColor="@color/calcWhiteText"
+        android:background="?attr/colorSecondaryContainer"
+        android:textColor="?attr/colorPrimaryDark"
         android:textSize="@dimen/_48sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:text="10,500"
+        android:text="@string/calcOutputText"
         app:layout_constraintTop_toBottomOf="@id/topSection"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -77,10 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
-            android:backgroundTint="@color/calc_orange_btn"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="C"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp"/>
 
         <Button
@@ -89,9 +86,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="⌫"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -100,9 +97,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="%"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -111,9 +108,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/orange_rounder"
+            android:backgroundTint="@color/orange"
             android:text="÷"
-            android:textColor="@color/calcWhiteText"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -122,9 +119,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="7"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -133,9 +130,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="8"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -144,9 +141,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="9"
-            android:textColor="@color/calcBtnText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -155,9 +152,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/orange_rounder"
+            android:backgroundTint="@color/orange"
+            android:textColor="?attr/colorPrimaryDark"
             android:text="X"
-            android:textColor="@color/calcWhiteText"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -166,9 +163,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="4"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -177,9 +174,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="5"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -188,9 +185,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="6"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -199,9 +196,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/orange_rounder"
             android:text="-"
-            android:textColor="@color/calcWhiteText"
+            android:backgroundTint="@color/orange"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -210,9 +207,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="1"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -221,9 +218,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="2"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -232,9 +229,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="3"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -243,9 +240,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/orange_rounder"
             android:text="+"
-            android:textColor="@color/calcWhiteText"
+            android:backgroundTint="@color/orange"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -255,9 +252,9 @@
             android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="0"
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -266,9 +263,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/rounder"
             android:text="."
-            android:textColor="@color/calcBtnText"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
 
         <Button
@@ -277,9 +274,9 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:background="@drawable/orange_rounder"
             android:text="@string/equals"
-            android:textColor="@color/calcWhiteText"
+            android:backgroundTint="@color/orange"
+            android:textColor="?attr/colorPrimaryDark"
             android:textSize="@dimen/_18sp" />
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

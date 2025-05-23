@@ -12,5 +12,23 @@
     <string name="PasswordExample">strongpassword123</string>
     <string name="LoginBtnText">Log in</string>
     <string name="title_activity_carlist">CarListActivity</string>
+    <string name="calcHistoryText">3000 : 10 X 0\n= 0\n100 + 400\n= 500\n500 + 5,000 + 5,000</string>
+    <string name="tempTemplate">%1$d°C</string>
+    <string name="windTemplate">Wind: %1$d m/s</string>
+    <string name="passwordEmpty">Enter your password!</string>
+    <string name="emailInvalid">Enter valid Email address!</string>
+    <string name="emailValid">Email Verified</string>
+    <string name="passwordValid">Password valid!</string>
+    <string name="passwordTooShort">Password must be longer than 6 symbols!</string>
+    <string name="calcOutputText">10,500</string>
+    <string name="weatherDatePlaceholder">Mon, May 21</string>
+    <string name="weatherDescriptionPlaceholder">Partly Cloudy</string>
+    <string name="weatherMaxTempPlaceholder">30°C</string>
+    <string name="weatherMinTempPlaceholder">20°C</string>
+    <string name="weatherWindPlaceholder">Wind: 3 m/s</string>
+    <string name="calcButtonText">Калькулятор</string>
+    <string name="listButtonText">Список</string>
+    <string name="weatherButtonText">Погода</string>
+    <string name="recyclerButtonText">Recycler</string>
 
 </resources>

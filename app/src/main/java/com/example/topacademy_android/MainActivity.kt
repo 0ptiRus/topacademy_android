@@ -3,7 +3,6 @@ package com.example.topacademy_android
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -28,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        emailEditText = this.findViewById(R.id.EmailTextEdit)
-        passEditText = this.findViewById(R.id.PasswordTextEdit)
-        loginBtn = findViewById(R.id.LoginBtn)
+        emailEditText = binding.EmailTextEdit
+        passEditText = binding.PasswordTextEdit
+        loginBtn = binding.LoginBtn
 
         if (savedInstanceState != null) {
             val savedEmail = savedInstanceState.getString("email", "")
@@ -48,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
     }
 
     private fun checkEmail() : Boolean {
@@ -61,10 +61,10 @@ class MainActivity : AppCompatActivity() {
         else
         {
             if (Patterns.EMAIL_ADDRESS.matcher(inputText).matches()) {
-                Toast.makeText(this@MainActivity, "Email Verified", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, getString(R.string.emailValid), Toast.LENGTH_LONG).show()
                 return true
             } else {
-                Toast.makeText(this@MainActivity, "Enter valid Email address!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, getString(R.string.emailInvalid), Toast.LENGTH_LONG).show()
                 return false
             }
         }
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
         if(inputText.isEmpty())
         {
-            Toast.makeText(this@MainActivity,"Enter your password!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, getString(R.string.passwordEmpty), Toast.LENGTH_LONG).show()
             return false
         }
 
@@ -84,20 +84,21 @@ class MainActivity : AppCompatActivity() {
         {
             if(inputText.length > 6)
             {
-                Toast.makeText(this@MainActivity,"Password valid!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity,
+                    getString(R.string.passwordValid), Toast.LENGTH_SHORT).show()
                 return true
             }
             else
             {
                 Toast.makeText(this@MainActivity,
-                    "Password must be longer than 6 symbols!",
+                    getString(R.string.passwordTooShort),
                     Toast.LENGTH_LONG).show()
                 return false
             }
         }
     }
 
-    fun onButtonClick(view: View?) {
+    fun onButtonClick() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }

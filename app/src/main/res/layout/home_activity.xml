@@ -15,66 +15,63 @@
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button_calculator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_20dp"
-            android:drawableLeft="@drawable/calculator"
-            android:text="Калькулятор"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:icon="@drawable/calculator"
+            android:text="@string/calcButtonText"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_10dp"
+            android:gravity="start|center_vertical"
+            app:layout_constraintBottom_toTopOf="@id/button_list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
             android:onClick="onCalculatorButtonClick" />
 
         <Button
             android:id="@+id/button_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_20dp"
-            android:drawableLeft="@drawable/list"
-            android:text="Список"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:icon="@drawable/list"
+            android:text="@string/listButtonText"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_10dp"
+            app:layout_constraintBottom_toTopOf="@id/button_weather"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_calculator"
             android:onClick="onListButtonClick"/>
 
         <Button
             android:id="@+id/button_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_20dp"
-            android:drawableLeft="@drawable/weather"
-            android:text="Погода"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:icon="@drawable/weather"
+            android:text="@string/weatherButtonText"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_10dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonСar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_list"
             android:onClick="onWeatherButtonClick"/>
 
         <Button
             android:id="@+id/buttonСar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_20dp"
-            android:text="Recycler"
+            android:text="@string/recyclerButtonText"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_weather"
             android:onClick="onRecyclerButtonClick"/>
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

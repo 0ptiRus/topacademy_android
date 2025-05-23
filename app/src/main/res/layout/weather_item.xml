@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12dp"
+    android:layout_marginEnd="@dimen/_12dp"
+    android:layout_marginTop="@dimen/_6dp"
+    android:layout_marginBottom="@dimen/_6dp"
+    app:cardCornerRadius="@dimen/_12dp"
+    app:cardElevation="@dimen/_4dp"
+    app:cardBackgroundColor="?attr/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16dp">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weatherDatePlaceholder"
+            android:textSize="@dimen/_16sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewWeather"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_0dp"
+
+            android:text="@string/weatherDescriptionPlaceholder"
+            android:textSize="@dimen/_18sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            android:drawablePadding="@dimen/_8dp"
+            app:drawableStartCompat="@drawable/cloudy"
+            app:layout_constraintTop_toBottomOf="@id/textViewDate"
+            app:layout_constraintEnd_toStartOf="@id/tempContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewWindSpeed"/>
+
+        <LinearLayout
+            android:id="@+id/tempContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/textViewWindSpeed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDate">
+
+                    <TextView
+                        android:id="@+id/textViewMaxTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weatherMaxTempPlaceholder"
+                        android:textSize="@dimen/_20sp"
+                        android:textColor="#FF3B30"/>
+
+                    <TextView
+                        android:id="@+id/textViewMinTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weatherMinTempPlaceholder"
+                        android:textSize="@dimen/_16sp"
+                        android:textColor="#4444FF"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="@string/weatherWindPlaceholder"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/_14sp"
+            app:drawableStartCompat="@drawable/wind"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewWeather" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

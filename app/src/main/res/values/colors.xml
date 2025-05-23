@@ -3,9 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="calcHistoryText">#F1C40F</color>
-    <color name="calcInputBg">#34495E</color>
+    <color name="darkGray">#34495E</color>
+    <color name="mediumGray">#6A6A6A</color>
+    <color name="lightGray">#D3D3D3</color>
     <color name="calcWhiteText">#FFFFFF</color>
     <color name="calc_gray_btn_bg">#ECF0F1</color>
-    <color name="calcBtnText">#2C3350</color>
-    <color name="calc_orange_btn">#FF5722</color>
+    <color name="orange">#FF5722</color>
+
+    <color name="dark_purple">#3C226B</color>
+    <color name="purple">#673AB7</color>
 </resources>
