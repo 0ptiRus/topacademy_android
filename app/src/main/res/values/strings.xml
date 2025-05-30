@@ -30,5 +30,8 @@
     <string name="listButtonText">Список</string>
     <string name="weatherButtonText">Погода</string>
     <string name="recyclerButtonText">Recycler</string>
+    <string name="carBrandModelTemplate">%1$s %2$s</string>
+    <string name="carYearTemplate">Год: %1$s</string>
+    <string name="carCostTemplate">Цена: %1$s ₽</string>
 
 </resources>

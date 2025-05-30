@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".di.MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,18 +17,18 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".home.presentation.ui.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.TopacAdemy_android"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".main.presentation.ui.MainActivity">
             <meta-data
                 android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".main.presentation.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,44 +38,44 @@
         </activity>
 
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".calculator.presentation.ui.CalculatorActivity"
             android:exported="false"
             android:label="@string/title_activity_calculator"
             android:theme="@style/Theme.TopacAdemy_android"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".home.presentation.ui.HomeActivity">
             <meta-data
                 android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
 
         <activity
-            android:name=".ListActivity"
+            android:name=".list.presentation.ui.ListActivity"
             android:exported="false"
             android:label="@string/title_activity_list"
             android:theme="@style/Theme.TopacAdemy_android"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".home.presentation.ui.HomeActivity">
             <meta-data
                 android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
 
         <activity
-            android:name=".WeatherActivity"
+            android:name=".weather.presentation.ui.WeatherActivity"
             android:exported="false"
             android:label="@string/title_activity_weather"
             android:theme="@style/Theme.TopacAdemy_android"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".home.presentation.ui.HomeActivity">
             <meta-data
                 android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
 
         <activity
-            android:name=".CarListActivity"
+            android:name=".car.presentation.ui.CarListActivity"
             android:exported="false"
             android:label="@string/title_activity_carlist"
             android:theme="@style/Theme.TopacAdemy_android"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".home.presentation.ui.HomeActivity">
 
             <meta-data
                 android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
