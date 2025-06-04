@@ -1,42 +1,45 @@
 package com.example.topacademy_android.calculator.presentation.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.topacademy_android.R
 import com.example.topacademy_android.calculator.domain.model.Result
 import com.example.topacademy_android.calculator.presentation.viewmodel.CalculatorViewModel
 import com.example.topacademy_android.databinding.CalculatorActivityBinding
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CalculatorActivity : AppCompatActivity() {
-    private lateinit var binding: CalculatorActivityBinding
+class CalculatorFragment : Fragment() {
+    private var _binding: CalculatorActivityBinding? = null
+
+    private val binding get() = _binding!!
     private val viewModel: CalculatorViewModel by viewModel()
-    private var isExpressionCalculated : Boolean = false
+    private var isExpressionCalculated: Boolean = false
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = CalculatorActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        val toolbar = binding.toolbar
-        setSupportActionBar(toolbar)
+        _binding = CalculatorActivityBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-        supportActionBar?.apply {
-            title = "Calculator"
-            setDisplayHomeAsUpEnabled(true)
-        }
+        return root
+    }
 
-        toolbar.setNavigationIcon(android.R.drawable.arrow_up_float)
-        toolbar.navigationIcon?.setTint(ContextCompat.getColor(this, R.color.black))
+    @SuppressLint("UnsafeRepeatOnLifecycleDetector")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val expressionEditText = binding.resultDisplay
 
@@ -48,10 +51,12 @@ class CalculatorActivity : AppCompatActivity() {
                             expressionEditText.text = result.data.toString()
                             isExpressionCalculated = true
                         }
+
                         is Result.Error -> {
                             Log.d("Expression error", expressionEditText.text.toString())
-                            Toast.makeText(this@CalculatorActivity, "Ошибка", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), "Ошибка", Toast.LENGTH_SHORT).show()
                         }
+
                         null -> {}
                     }
                 }
@@ -60,7 +65,6 @@ class CalculatorActivity : AppCompatActivity() {
 
         setupButtons()
     }
-
 
     private fun setupButtons() {
         val buttons = listOf(
@@ -72,8 +76,7 @@ class CalculatorActivity : AppCompatActivity() {
         )
 
         val listener = View.OnClickListener { view ->
-            if(isExpressionCalculated)
-            {
+            if (isExpressionCalculated) {
                 binding.resultDisplay.text = ""
                 isExpressionCalculated = false
             }
@@ -82,7 +85,7 @@ class CalculatorActivity : AppCompatActivity() {
             binding.resultDisplay.append(button.text)
         }
 
-        buttons.forEach { b -> b.setOnClickListener(listener)}
+        buttons.forEach { b -> b.setOnClickListener(listener) }
 
         binding.buttonC.setOnClickListener {
             binding.resultDisplay.text = ""
@@ -101,6 +104,4 @@ class CalculatorActivity : AppCompatActivity() {
             }
         }
     }
-
-
 }

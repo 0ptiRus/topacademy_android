@@ -1,35 +1,37 @@
 package com.example.topacademy_android.car.presentation.ui
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.topacademy_android.R
 import com.example.topacademy_android.car.data.remote.dto.Car
 import com.example.topacademy_android.car.presentation.adapters.CarAdapter
 import com.example.topacademy_android.databinding.CarActivityBinding
 
-class CarListActivity : AppCompatActivity() {
+class CarFragment : Fragment() {
+    private var _binding: CarActivityBinding? = null
 
-    private lateinit var binding: CarActivityBinding
+
+    private val binding get() = _binding!!
     private lateinit var adapter: CarAdapter
     private lateinit var allCars: List<Car>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = CarActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        val toolbar = binding.toolbar
-        setSupportActionBar(toolbar)
+        _binding = CarActivityBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-        supportActionBar?.apply {
-            title = "Cars"
-            setDisplayHomeAsUpEnabled(true)
-        }
+        return root
+    }
 
-        toolbar.setNavigationIcon(android.R.drawable.arrow_up_float)
-        toolbar.navigationIcon?.setTint(ContextCompat.getColor(this, R.color.black))
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         allCars = listOf(
             Car("Toyota", "Corolla", 2020, "Reliable and fuel-efficient", 20000),
@@ -40,7 +42,7 @@ class CarListActivity : AppCompatActivity() {
         )
         adapter = CarAdapter(allCars)
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
     }
 }
