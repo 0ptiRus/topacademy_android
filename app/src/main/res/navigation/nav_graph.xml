@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.topacademy_android.main.presentation.ui.MainFragment"
+        android:label="Main">
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_home_to_detail"-->
+        <!--            app:destination="@id/detailFragment" />-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.topacademy_android.calculator.presentation.ui.CalculatorFragment"
+        android:label="Calculator" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.topacademy_android.list.presentation.ui.ListFragment"
+        android:label="List" />
+
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.example.topacademy_android.car.presentation.ui.CarFragment"
+        android:label="Car" />
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.topacademy_android.weather.presentation.ui.WeatherFragment"
+        android:label="Car" />
+</navigation>

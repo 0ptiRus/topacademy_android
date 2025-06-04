@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">TopacAdemy_android</string>
-    <string name="my_name">Roman</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
     <string name="title_activity_list">ListActivity</string>
@@ -20,7 +19,6 @@
     <string name="emailValid">Email Verified</string>
     <string name="passwordValid">Password valid!</string>
     <string name="passwordTooShort">Password must be longer than 6 symbols!</string>
-    <string name="calcOutputText">10,500</string>
     <string name="weatherDatePlaceholder">Mon, May 21</string>
     <string name="weatherDescriptionPlaceholder">Partly Cloudy</string>
     <string name="weatherMaxTempPlaceholder">30°C</string>
@@ -33,5 +31,28 @@
     <string name="carBrandModelTemplate">%1$s %2$s</string>
     <string name="carYearTemplate">Год: %1$s</string>
     <string name="carCostTemplate">Цена: %1$s ₽</string>
+    <string name="c">C</string>
+    <string name="erase">⌫</string>
+    <string name="percent">%</string>
+    <string name="dividew">÷</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="multiply">*</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="subtract">-</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="add">+</string>
+    <string name="_0">0</string>
+    <string name="floatingpoint">.</string>
+    <string name="enterEmailText">Enter your email!</string>
+    <string name="calculatorNavItem">Calculator</string>
+    <string name="listNavItem">List</string>
+    <string name="carNavItem">Car</string>
+    <string name="weatherNavItem">Weather</string>
 
 </resources>
