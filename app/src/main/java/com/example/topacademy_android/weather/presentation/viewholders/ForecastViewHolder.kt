@@ -18,7 +18,7 @@ class ForecastViewHolder(private val binding: WeatherItemBinding) : RecyclerView
         binding.textViewMaxTemp.text = context.getString(R.string.tempTemplate, dataSeries.temp2m.max)
         binding.textViewMinTemp.text = context.getString(R.string.tempTemplate, dataSeries.temp2m.min)
         binding.textViewWindSpeed.text =
-            context.getString(R.string.windTemplate, dataSeries.wind10m_max)
+            context.getString(R.string.windTemplate, dataSeries.wind10mMax)
 
         val iconResId = when (dataSeries.weather) {
             "clear" -> R.drawable.clear
